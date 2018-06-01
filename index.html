@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gaurav Singhal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="particle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="typing.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="social.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <style>
+        .btn-1 {
+            display: inline-block;
+            position: relative;
+            background: none;
+            border-width: 0.04em 0.04em 0.09em 0.04em;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px 30px;
+            background: rgba(0, 0, 0, 0.09);
+        }
+        .btn-text {
+            display: block;
+            padding: 25px 80px;
+        }
+        .btn-1::before,
+        .btn-1::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            position: absolute;
+            transition: all 0.2s linear;
+            background: #fff;
+        }
+        .btn-text::before,
+        .btn-text::after {
+            content: "";
+            width: 2px;
+            height: 0;
+            position: absolute;
+            transition: all 0.2s linear;
+            background: #fff;
+        }
+
+        .btn-1:hover::before,
+        .btn-1:hover::after {
+            width: 100%;
+        }
+        .btn-1:hover .btn-text::before,
+        .btn-1:hover .btn-text::after {
+            height: 100%;
+        }
+        /*----- button 1 -----*/
+
+        .btn-1::before,
+        .btn-1::after {
+            transition-delay: 0.2s;
+        }
+        .btn-1 .btn-text::before,
+        .btn-1 .btn-text::after {
+            transition-delay: 0s;
+        }
+    
+        .btn-1::before {
+            right: 0;
+            top: 0;
+        }
+
+        .btn-1::after {
+            left: 0;
+            bottom: 0;
+        }
+
+        .btn-1 .btn-text::before {
+            left: 0;
+            top: 0;
+        }
+
+        .btn-1 .btn-text::after {
+            right: 0;
+            bottom: 0;
+        }
+
+        .btn-1:hover::before,
+        .btn-1:hover::after {
+            transition-delay: 0s;
+        }
+
+        .btn-1:hover .btn-text::before,
+        .btn-1:hover .btn-text::after {
+            transition-delay: 0.2s;
+        }
+
+        .btn-text {
+            font-weight: 400;
+        }
+
+        /*Add custom cursor so it auto inherits font styles*/
+
+        .typed::after {
+            content: '|';
+            display: inline;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+
+        /*Removes cursor that comes with typed.js*/
+
+        .typed-cursor {
+            opacity: 0;
+            display: none;
+        }
+
+        /*Custom cursor animation*/
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        #img_code {
+            width: 239px;
+            margin-bottom: -28px;
+            height: 109px;
+        }
+        .btn-2 {
+            background-color: rgb(15,12,46);
+            height: 39px;
+            width: 171px;
+            margin: 7px;
+            border: 0px;
+        }
+        span.btn-text-b2 {
+            font-size: 14px;
+            color: white;
+        }
+        .project-category {
+            margin-bottom: 35px;
+        }
+        /* .btn-2:hover {
+            background: #fff;
+        }
+        .btn-2:hover span{
+            color: #000;
+            font-weight: bold;
+        } */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section style="min-height:640px;">
+        <div id="particles-js">
+            <div class="header">
+                <h1>Hi, My name is
+                    <span class="main_head">Gaurav Singhal</span>
+                </h1>
+                <div id="typing">
+                    <h1>and I'm a
+                        <span class="typed"></span>
+                        <!-- <span class="txt-rotate" data-period="100" data-rotate='[ "Tech Agnostic", "Web Dev", "Mentor", "Entrepreneur", "Consultant" ]'></span> -->
+                    </h1>
+                    <br>
+                </div>
+                <h1>
+                    living in
+                    <span class="main_head">India</span>
+                </h1>
+                <a href="resume.pdf" target="_blank">
+                    <button class="btn-1">
+                        <span class="btn-text">Resume</span>
+                    </button>
+                </a>
+
+
+
+            </div>
+            <a class="down" href="#about" data-scroll>
+                <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+    <br>
+
+
+
+    <section id="about">
+        <div class="user-details">
+            <h1> My Expertise </h1>
+            <p>I am Developer with good insights in Data structure and algorithm. I am expertise in programming languages like
+                Microsoft Dynamics AX ERP, Microsoft Dynamics 365 for Operations, C/C++, JAVA, Python, NodeJS, Php, ReactJs, Databases, Compilers, Javascript, HTML/CSS.
+            </p>
+        </div>
+        <div class="user">
+            <div class="tech">
+                <h2>Design</h2>
+                <i class="fa fa-html5"></i>
+                <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                <i class="fa fa-css3 fa-sm"></i>
+                <p> I design the pages with HTML, CSS and Bootstrap</p>
+            </div>
+            <div class="tech">
+                <h2>Code</h2>
+                <!-- <i class="devicon-python-plain-wordmark"></i>
+                <i class="devicon-django-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i> -->
+                <img src="code.jpg" id="img_code" alt="code" />
+                <p> I code the backend in Java, Python, NodeJS, and Django </p>
+            </div>
+            <div class="tech">
+                <h2>Tools</h2>
+                <i class="devicon-git-plain"></i>
+                <img src="digitalocean.svg" style="width:80px; height:60px;">
+                <img src="sublime-icon.png" style="width:80px; height:60px;">
+                <p> I use the tools Git, Sublime Text and Digital Ocean/Heroku</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="projects" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
+        <div class="user-details">
+            <h1 class="wow bounceInUp"> Featured Projects </h1>
+        </div>
+        <div class="project-category">
+            <button class="btn-2" id="ax"><span class="btn-text-b2">MS Dynamics AX</span></button>
+            <button class="btn-2" id="java"><span class="btn-text-b2">JAVA</span></button>
+            <button class="btn-2" id="python"><span class="btn-text-b2">Python</span></button>
+            <button class="btn-2" id="others"><span class="btn-text-b2">Others</span></button>
+            <button class="btn-2" id="all"><span class="btn-text-b2">All</span></button>
+        </div>
+        <!-- AX Project -->
+        <div class="user-projects ax" style="display: none;">
+            <div class="images-left">
+                <img alt="Manufacturing" src="Images/manufacture1.png" />
+            </div>
+            <div class="contents-right">
+                <h3> ERP Implementation | Metal and Medical Parts Manufacturer</h3>
+                <ul>
+                    <li>Microsoft Dynamics AX 2012 R3</li>
+                    <li>SSRS, BI, Data Migration</li>
+                    <li>Microsoft Visual Studio, MS SQL</li>
+                </ul>
+                <p>Client is a leading Manufacturer of Medical equipments and Metal Parts. This was an Green-field ERP end-to-end Implementation
+                    which enables industry to automate and integrate all the departments like Finance, Supply Chain, Trade and Logistics, Sales,
+                    HR, Purchase, Inventory, Warehousing etc. My Role in the Project was to setup the Infrastructure or Installation and Configuration,
+                    X++ and SSRS Report Developer, Finance and Production Consultant. 
+                </p>
+            </div>
+        </div>
+        <div class="user-projects ax" style="display: none;">
+            <div class="images-right">
+                <img alt="Finance Domain" src="Images/financial.jpg" />
+            </div>
+            <div class="contents">
+                <h3> ERP Implementation | Finance Domain</h3>
+                <ul>
+                    <li>Microsoft Dynamics AX 2012 R3</li>
+                    <li>SSRS, Data Migration</li>
+                    <li>Microsoft Visual Studio, MS SQL</li>
+                </ul>
+                <p>Client is a leading Finance company. This was an ERP end-to-end Implementation. My Role in the Project was to setup the
+                    Infrastructure or Installation and Configuration, X++ and SSRS Report Developer, Finance Consultant. 
+                </p>
+            </div>
+        </div>
+        <div class="user-projects ax" style="display: none;">
+            <div class="images-left">
+                <img alt="Customization and Support" src="Images/support.jpg" />
+            </div>
+            <div class="contents-right">
+                <h3> Product Implementation | Customization and Support</h3>
+                <ul>
+                    <li>Microsoft Dynamics AX 2012 R3</li>
+                    <li>SSRS, Data Migration</li>
+                    <li>Microsoft Visual Studio, MS SQL</li>
+                </ul>
+                <p>Client is a Manufacturer. This was a Support Project. My Role in the Project was to work on new Customization and 
+                    Enhancements using X++ and develop various Business repots using SSRS. 
+                </p>
+            </div>
+        </div>
+        <div class="user-projects ax" style="display: none;">
+            <div class="images-right">
+                <img alt="Equipment Rental Vertical" src="Images/equipment.jpg" />
+            </div>
+            <div class="contents">
+                <h3> Equipement Vertical | ISV</h3>
+                <ul>
+                    <li>Microsoft Dynamics AX 2012 R2</li>
+                    <li>SSRS</li>
+                    <li>Microsoft Visual Studio, MS SQL</li>
+                </ul>
+                <p></p>This was an ISV Project. My Role in the Project was to work on new Customization and 
+                    Enhancements using X++ and develop various Business repots using SSRS. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Python Projects -->
+        <div class="user-projects python" style="display: none;">
+            <div class="images-left">
+                <img alt="Gems and Jewellery" src="Images/gems.jpg" />
+            </div>
+            <div class="contents-right">
+                <h3> Gems Retailer</h3>
+                <ul>
+                    <li>Python, Django</li>
+                    <li>PostgreSQL</li>
+                    <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>Client is a Gems Retailer. This Web Application which enables client to showcase all the Products it deals in, Tradeshows organised
+                    in various countries. A seperate admin portal is provided to Client to manage the details of Front facing Website.  
+                </p>
+            </div>
+        </div>
+        <div class="user-projects python" style="display: none;">
+            <div class="images-right">
+                <img alt="Fleet Management" src="Images/fleet.png" />
+            </div>
+            <div class="contents">
+                <h3> Fleet Management</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Odoo V9.0, PostgreSQL</li>
+                    <li>XML</li>
+                </ul>
+                <p>Application is responsible for making Townships robust by providing online solutions for all facilities such as Booking of
+                    Guest house, Community Hall, Theatres, Gate Pass, Customer records, Maintenance, Accounting, Utilities etc</p>
+            </div>
+        </div>
+        <div class="user-projects python" style="display: none;">
+            <div class="images-left">
+                <img alt="croma" src="Images/croma.jpg" />
+            </div>
+            <div class="contents-right">
+                <h3> Croma</h3>
+                <ul>
+                    <li> Python3, Django</li>
+                    <li> PostgreSQL</li>
+                    <li> HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>
+                    I contributed in this project for my dad's medical shop. This project is beneficial for the ones, who runs
+                    a chemist shop and Pharmacy shop, where user can create the stock of items, create Sale Invoice and make
+                    Purchase Invoice and take the Reports of the same
+                </p>
+                <a class="project-link" href="https://github.com/krazygaurav/Croma" target="_blank">Check it out</a>
+            </div>
+        </div>
+
+
+        <!-- JAVA Projects -->
+        <div class="user-projects java" style="display: none;">
+            <div class="images-left">
+                <img alt="Accounting" src="Images/financial.jpg" />
+            </div>
+            <div class="contents-right">
+                <h3> Financial Accountancy</h3>
+                <ul>
+                    <li>Struts 2.0, Hibernate</li>
+                    <li>JSP Pages, MySQL</li>
+                    <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>Client is a Finance Company which manages Accounting information of various clients. My Role in this Project is of a Back-end 
+                    and Front-end Developer</p>
+            </div>
+        </div>
+        <div class="user-projects java" style="display: none;">
+            <div class="images-right">
+                <img alt="Real Estate" src="Images/realestate.jpg" />
+            </div>
+            <div class="contents">
+                <h3> Real Estate</h3>
+                <ul>
+                    <li>Struts 2.0, Hibernate</li>
+                    <li>JSP Pages, MySQL</li>
+                    <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>Application is responsible for making Townships robust by providing online solutions for all facilities such as Booking of
+                    Guest house, Community Hall, Theatres, Gate Pass, Customer records, Maintenance, Accounting, Utilities etc</p>
+            </div>
+        </div>
+        <div class="user-projects java" style="display: none;">
+            <div class="images-left">
+                <img alt="General Education Development" src="Images/ged.jpg" />
+            </div>
+            <div class="contents-right">
+                <h3> General Education Development</h3>
+                <ul>
+                    <li>Struts 2.0, Hibernate</li>
+                    <li>JSP Pages, MySQL</li>
+                    <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>Client is a School which required a portal on which they can upload Video and Audio lectures for a Student to learn. 
+                    Also on behalf of there learning an Online Adaptive test has to be conducted</p>
+            </div>
+        </div>
+        <div class="user-projects java" style="display: none;">
+            <div class="images-right">
+                <img alt="Online Examination System" src="Images/online-test-series.jpg" />
+            </div>
+            <div class="contents">
+                <h3> Online Adaptive Examination</h3>
+                <ul>
+                    <li>Servlets</li>
+                    <li>JSP Pages, MySQL</li>
+                    <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>My contribution in this project is a Developer and Architect. This program is a education portal, we have embedded 
+                    the lecture facility in this program and on behalf of that a test is conducted which is adaptive and according 
+                        to the marks obtained, student is given a report card specifying his pros and cons and how to overcome his mistakes.</p>
+            </div>
+        </div>
+        <div class="user-projects java" style="display: none;">
+            <div class="images-left">
+                <img alt="Offline Emailer" src="Images/offline-email.jpg" />
+            </div>
+            <div class="contents-right">
+                <h3> Offline Emailer</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>RMI</li>
+                    <li>MySQL</li>
+                </ul>
+                <p>This project provides the offline emailing on one of the famous e-mailing site i.e. Gmail.
+                        This project requires a server machine to handle the sending mails. It waits for internet connection on 
+                        server machine and as soon as machine goes online, all the mails of client's are transferred to their
+                            respective addresses.</p>
+            </div>
+        </div>
+
+        <!-- Others Project -->
+        <div class="user-projects others" style="display: none;">
+            <div class="images-left">
+                <img alt="Community App" src="Images/forum.png" />
+            </div>
+            <div class="contents-right">
+                <h3> Community App</h3>
+                <ul>
+                    <li>NodeJS</li>
+                    <li>CouchDB</li>
+                    <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
+                </ul>
+                <p>Client is a Manufacturer. This product enables the employees of the Company at different geographical to check the Climatic
+                        condition of the WorkArea before going to work; also, provides a internal Forum for all Employees, Stake Holders to address 
+                        any issue or to participate in an ongoing Discussion.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="social">
+        <div class="social-media-wrap">
+            <div class="social-media">
+                <div class="social-dot-wrap">
+                    <span class="social-dot"></span>
+                    <span class="social-dot"></span>
+                    <span class="social-dot"></span>
+                    <span class="social-dot"></span>
+                </div>
+                <div class="social-media-lnk-wrap">
+                    <a href="https://stackoverflow.com/users/3481574/gaurav-singhal" target="_blank" class="social-media-lnk">
+                        <i class="fa fa-stack-overflow"></i>
+                    </a>
+                    <a href="https://github.com/krazygaurav" target="_blank" class="social-media-lnk">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/krazy.gaurav93" target="_blank" class="social-media-lnk">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gaurav-singhal-10514062/" target="_blank" class="social-media-lnk">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lamp">
+                <div class="lamp-top">
+                    <div class="back"></div>
+                    <div class="light"></div>
+                </div>
+                <div class="lamp-stand"></div>
+                <div class="lamp-bottom"></div>
+            </div>
+            <div class="designer">
+                <div class="head">
+                    <div class="hair">
+                        <div class="hair-dtl"></div>
+                    </div>
+                    <div class="face">
+                        <div class="face-dtl">
+                            <div class="eye lt"></div>
+                            <div class="eye rt"></div>
+                        </div>
+                    </div>
+                    <div class="ears"></div>
+                    <div class="neck"></div>
+                </div>
+                <div class="laptop">
+                    <a>
+                        <i class="fa  fa-linux"></i>
+                    </a>
+                    <div class="fingers">
+                        <div class="figers-dtl"></div>
+                        <div class="figers-dtl"></div>
+                        <div class="figers-dtl"></div>
+                        <div class="figers-dtl"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="coffee">
+            <div class="vapour">
+                <div class="vapour-dtl">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="vapour-dtl">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="vapour-dtl">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="cup"></div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer">
+        <p>Build with
+            <span class="love">❤</span> by
+            <a href="https://github.com/krazygaurav">Gaurav Singhal</a>
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+    <script src="typing.js"></script>
+    <script src="particle.js"></script>
+    <script>
+        function manageProjects(hide, doHide){
+            var allProjects = ["ax", "java", "python", "others", "all"];
+            $.each(allProjects, function(i, v){
+                var className = v;
+                if(doHide === "hideall"){
+                    $("."+className).hide();
+                } else if(doHide === "showall"){
+                    $("."+className).show();
+                } else if(hide === className){
+                    if(doHide === "hide"){
+                        $("."+className).hide();
+                    } else if(doHide === "show"){
+                        $("."+className).show();
+                    } 
+                }
+            });
+        }
+        $(document).ready(function () {
+            document.addEventListener('DOMContentLoaded', () => {
+                const scroller = new SweetScroll({});
+            }, false);
+            new WOW().init();
+            manageProjects("NA", "hideall");
+            manageProjects("ax", "show");
+        });
+
+        $(document).ready(function () {
+            $("#ax").on("click", function(){
+                manageProjects("NA", "hideall");
+                manageProjects("ax", "show");
+            });
+            $("#java").on("click", function(){
+                manageProjects("NA", "hideall");
+                manageProjects("java", "show");
+            });
+            $("#python").on("click", function(){
+                manageProjects("NA", "hideall");
+                manageProjects("python", "show");
+            });
+            $("#others").on("click", function(){
+                manageProjects("NA", "hideall");
+                manageProjects("others", "show");
+            });
+            $("#all").on("click", function(){
+                manageProjects("NA", "showall");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
