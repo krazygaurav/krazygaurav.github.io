@@ -132,6 +132,10 @@ function manageProjects(hide, doHide){
     });
 }
 $(document).ready(function () {
+    document.addEventListener('DOMContentLoaded', () => {
+        const scroller = new SweetScroll({});
+    }, false);
+    new WOW().init();
     manageProjects("NA", "hideall");
     manageProjects("ax", "show");
 });
