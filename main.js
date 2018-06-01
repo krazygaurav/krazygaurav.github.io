@@ -112,3 +112,48 @@ document.addEventListener("DOMContentLoaded", function () {
         retina_detect: !0
     })
 }, !1);
+
+
+function manageProjects(hide, doHide){
+    var allProjects = ["ax", "java", "python", "others", "all"];
+    $.each(allProjects, function(i, v){
+        var className = v;
+        if(doHide === "hideall"){
+            $("."+className).hide();
+        } else if(doHide === "showall"){
+            $("."+className).show();
+        } else if(hide === className){
+            if(doHide === "hide"){
+                $("."+className).hide();
+            } else if(doHide === "show"){
+                $("."+className).show();
+            } 
+        }
+    });
+}
+$(document).ready(function () {
+    manageProjects("NA", "hideall");
+    manageProjects("ax", "show");
+});
+
+$(document).ready(function () {
+    $("#ax").on("click", function(){
+        manageProjects("NA", "hideall");
+        manageProjects("ax", "show");
+    });
+    $("#java").on("click", function(){
+        manageProjects("NA", "hideall");
+        manageProjects("java", "show");
+    });
+    $("#python").on("click", function(){
+        manageProjects("NA", "hideall");
+        manageProjects("python", "show");
+    });
+    $("#others").on("click", function(){
+        manageProjects("NA", "hideall");
+        manageProjects("others", "show");
+    });
+    $("#all").on("click", function(){
+        manageProjects("NA", "showall");
+    });
+});
