@@ -6,14 +6,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Gaurav Singhal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="particle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/particle.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="typing.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="social.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/typing.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/social.css" />
+    <style>
+        #loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        #loader {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3498db;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            z-index: 1001;
+        }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #e74c3c;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #f9c922;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        #loader-wrapper .loader-section {
+            position: fixed;
+            top: 0;
+            width: 51%;
+            height: 100%;
+            background: #222222;
+            z-index: 1000;
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        #loader-wrapper .loader-section.section-left {
+            left: 0;
+        }
+
+        #loader-wrapper .loader-section.section-right {
+            right: 0;
+        }
+        /* Loaded */
+        .loaded #loader-wrapper .loader-section.section-left {
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        }
+        .loaded #loader-wrapper .loader-section.section-right {
+            -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            transform: translateX(100%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        }
+        .loaded #loader {
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        .loaded #loader-wrapper {
+            visibility: hidden;
+            -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transition: all 0.3s 1s ease-out;
+            transition: all 0.3s 1s ease-out;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
     <section style="min-height:640px;">
         <div id="particles-js">
             <div class="header">
@@ -53,7 +187,8 @@
         <div class="user-details">
             <h1> My Expertise </h1>
             <p>I am Developer with good insights in Data structure and algorithm. I am expertise in programming languages like
-                Microsoft Dynamics AX ERP, Microsoft Dynamics 365 for Operations, C/C++, JAVA, Python, NodeJS, Php, ReactJs, Databases, Compilers, Javascript, HTML/CSS.
+                Microsoft Dynamics AX ERP, Microsoft Dynamics 365 for Operations, C/C++, JAVA, Python, NodeJS, Php, ReactJs,
+                Databases, Compilers, Javascript, HTML/CSS.
             </p>
         </div>
         <div class="user">
@@ -89,11 +224,21 @@
             <h1 class="wow bounceInUp"> Featured Projects </h1>
         </div>
         <div class="project-category">
-            <button class="btn-2" id="ax"><span class="btn-text-b2">MS Dynamics AX</span></button>
-            <button class="btn-2" id="java"><span class="btn-text-b2">JAVA</span></button>
-            <button class="btn-2" id="python"><span class="btn-text-b2">Python</span></button>
-            <button class="btn-2" id="others"><span class="btn-text-b2">Others</span></button>
-            <button class="btn-2" id="all"><span class="btn-text-b2">All</span></button>
+            <button class="btn-2" id="ax">
+                <span class="btn-text-b2">MS Dynamics AX</span>
+            </button>
+            <button class="btn-2" id="java">
+                <span class="btn-text-b2">JAVA</span>
+            </button>
+            <button class="btn-2" id="python">
+                <span class="btn-text-b2">Python</span>
+            </button>
+            <button class="btn-2" id="others">
+                <span class="btn-text-b2">Others</span>
+            </button>
+            <button class="btn-2" id="all">
+                <span class="btn-text-b2">All</span>
+            </button>
         </div>
         <!-- AX Project -->
         <div class="user-projects ax" style="display: none;">
@@ -107,10 +252,11 @@
                     <li>SSRS, BI, Data Migration</li>
                     <li>Microsoft Visual Studio, MS SQL</li>
                 </ul>
-                <p>Client is a leading Manufacturer of Medical equipments and Metal Parts. This was an Green-field ERP end-to-end Implementation
-                    which enables industry to automate and integrate all the departments like Finance, Supply Chain, Trade and Logistics, Sales,
-                    HR, Purchase, Inventory, Warehousing etc. My Role in the Project was to setup the Infrastructure or Installation and Configuration,
-                    X++ and SSRS Report Developer, Finance and Production Consultant. 
+                <p>Client is a leading Manufacturer of Medical equipments and Metal Parts. This was an Green-field ERP end-to-end
+                    Implementation which enables industry to automate and integrate all the departments like Finance, Supply
+                    Chain, Trade and Logistics, Sales, HR, Purchase, Inventory, Warehousing etc. My Role in the Project was
+                    to setup the Infrastructure or Installation and Configuration, X++ and SSRS Report Developer, Finance
+                    and Production Consultant.
                 </p>
             </div>
         </div>
@@ -125,8 +271,9 @@
                     <li>SSRS, Data Migration</li>
                     <li>Microsoft Visual Studio, MS SQL</li>
                 </ul>
-                <p>Client is a leading Finance company. This was an ERP end-to-end Implementation. My Role in the Project was to setup the
-                    Infrastructure or Installation and Configuration, X++ and SSRS Report Developer, Finance Consultant. 
+                <p>Client is a leading Finance company. This was an ERP end-to-end Implementation. My Role in the Project was
+                    to setup the Infrastructure or Installation and Configuration, X++ and SSRS Report Developer, Finance
+                    Consultant.
                 </p>
             </div>
         </div>
@@ -141,8 +288,8 @@
                     <li>SSRS, Data Migration</li>
                     <li>Microsoft Visual Studio, MS SQL</li>
                 </ul>
-                <p>Client is a Manufacturer. This was a Support Project. My Role in the Project was to work on new Customization and 
-                    Enhancements using X++ and develop various Business repots using SSRS. 
+                <p>Client is a Manufacturer. This was a Support Project. My Role in the Project was to work on new Customization
+                    and Enhancements using X++ and develop various Business repots using SSRS.
                 </p>
             </div>
         </div>
@@ -157,8 +304,8 @@
                     <li>SSRS</li>
                     <li>Microsoft Visual Studio, MS SQL</li>
                 </ul>
-                <p></p>This was an ISV Project. My Role in the Project was to work on new Customization and 
-                    Enhancements using X++ and develop various Business repots using SSRS. 
+                <p></p>This was an ISV Project. My Role in the Project was to work on new Customization and Enhancements using
+                X++ and develop various Business repots using SSRS.
                 </p>
             </div>
         </div>
@@ -175,8 +322,9 @@
                     <li>PostgreSQL</li>
                     <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
-                <p>Client is a Gems Retailer. This Web Application which enables client to showcase all the Products it deals in, Tradeshows organised
-                    in various countries. A seperate admin portal is provided to Client to manage the details of Front facing Website.  
+                <p>Client is a Gems Retailer. This Web Application which enables client to showcase all the Products it deals
+                    in, Tradeshows organised in various countries. A seperate admin portal is provided to Client to manage
+                    the details of Front facing Website.
                 </p>
             </div>
         </div>
@@ -191,8 +339,9 @@
                     <li>Odoo V9.0, PostgreSQL</li>
                     <li>XML</li>
                 </ul>
-                <p>Application is responsible for making Townships robust by providing online solutions for all facilities such as Booking of
-                    Guest house, Community Hall, Theatres, Gate Pass, Customer records, Maintenance, Accounting, Utilities etc</p>
+                <p>Application is responsible for making Townships robust by providing online solutions for all facilities such
+                    as Booking of Guest house, Community Hall, Theatres, Gate Pass, Customer records, Maintenance, Accounting,
+                    Utilities etc</p>
             </div>
         </div>
         <div class="user-projects python" style="display: none;">
@@ -207,9 +356,9 @@
                     <li> HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
                 <p>
-                    I contributed in this project for my dad's medical shop. This project is beneficial for the ones, who runs
-                    a chemist shop and Pharmacy shop, where user can create the stock of items, create Sale Invoice and make
-                    Purchase Invoice and take the Reports of the same
+                    I contributed in this project for my dad's medical shop. This project is beneficial for the ones, who runs a chemist shop
+                    and Pharmacy shop, where user can create the stock of items, create Sale Invoice and make Purchase Invoice
+                    and take the Reports of the same
                 </p>
                 <a class="project-link" href="https://github.com/krazygaurav/Croma" target="_blank">Check it out</a>
             </div>
@@ -228,8 +377,8 @@
                     <li>JSP Pages, MySQL</li>
                     <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
-                <p>Client is a Finance Company which manages Accounting information of various clients. My Role in this Project is of a Back-end 
-                    and Front-end Developer</p>
+                <p>Client is a Finance Company which manages Accounting information of various clients. My Role in this Project
+                    is of a Back-end and Front-end Developer</p>
             </div>
         </div>
         <div class="user-projects java" style="display: none;">
@@ -243,8 +392,9 @@
                     <li>JSP Pages, MySQL</li>
                     <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
-                <p>Application is responsible for making Townships robust by providing online solutions for all facilities such as Booking of
-                    Guest house, Community Hall, Theatres, Gate Pass, Customer records, Maintenance, Accounting, Utilities etc</p>
+                <p>Application is responsible for making Townships robust by providing online solutions for all facilities such
+                    as Booking of Guest house, Community Hall, Theatres, Gate Pass, Customer records, Maintenance, Accounting,
+                    Utilities etc</p>
             </div>
         </div>
         <div class="user-projects java" style="display: none;">
@@ -258,8 +408,8 @@
                     <li>JSP Pages, MySQL</li>
                     <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
-                <p>Client is a School which required a portal on which they can upload Video and Audio lectures for a Student to learn. 
-                    Also on behalf of there learning an Online Adaptive test has to be conducted</p>
+                <p>Client is a School which required a portal on which they can upload Video and Audio lectures for a Student
+                    to learn. Also on behalf of there learning an Online Adaptive test has to be conducted</p>
             </div>
         </div>
         <div class="user-projects java" style="display: none;">
@@ -273,9 +423,10 @@
                     <li>JSP Pages, MySQL</li>
                     <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
-                <p>My contribution in this project is a Developer and Architect. This program is a education portal, we have embedded 
-                    the lecture facility in this program and on behalf of that a test is conducted which is adaptive and according 
-                        to the marks obtained, student is given a report card specifying his pros and cons and how to overcome his mistakes.</p>
+                <p>My contribution in this project is a Developer and Architect. This program is a education portal, we have
+                    embedded the lecture facility in this program and on behalf of that a test is conducted which is adaptive
+                    and according to the marks obtained, student is given a report card specifying his pros and cons and
+                    how to overcome his mistakes.</p>
             </div>
         </div>
         <div class="user-projects java" style="display: none;">
@@ -289,10 +440,9 @@
                     <li>RMI</li>
                     <li>MySQL</li>
                 </ul>
-                <p>This project provides the offline emailing on one of the famous e-mailing site i.e. Gmail.
-                        This project requires a server machine to handle the sending mails. It waits for internet connection on 
-                        server machine and as soon as machine goes online, all the mails of client's are transferred to their
-                            respective addresses.</p>
+                <p>This project provides the offline emailing on one of the famous e-mailing site i.e. Gmail. This project requires
+                    a server machine to handle the sending mails. It waits for internet connection on server machine and
+                    as soon as machine goes online, all the mails of client's are transferred to their respective addresses.</p>
             </div>
         </div>
 
@@ -308,9 +458,9 @@
                     <li>CouchDB</li>
                     <li>HTML/CSS3, JS/JQuery, Bootstrap3</li>
                 </ul>
-                <p>Client is a Manufacturer. This product enables the employees of the Company at different geographical to check the Climatic
-                        condition of the WorkArea before going to work; also, provides a internal Forum for all Employees, Stake Holders to address 
-                        any issue or to participate in an ongoing Discussion.
+                <p>Client is a Manufacturer. This product enables the employees of the Company at different geographical to
+                    check the Climatic condition of the WorkArea before going to work; also, provides a internal Forum for
+                    all Employees, Stake Holders to address any issue or to participate in an ongoing Discussion.
                 </p>
             </div>
         </div>
@@ -408,16 +558,14 @@
             <a href="https://github.com/krazygaurav">Gaurav Singhal</a>
         </p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-    <script src="typing.js"></script>
-    <script src="particle.js"></script>
-    <script src="main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/sweet-scroll.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/main.js"></script>
+    <link href="css/fonts.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </body>
+
 </html>
