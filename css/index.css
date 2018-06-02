@@ -1,5 +1,4 @@
 /*START - typing.css*/
-
 #typing>h1 {
     font-family: 'Raleway', sans-serif;
     width: 100%;
@@ -394,4 +393,48 @@ span.btn-text-b2 {
     transform: translateY(-100%);
     -webkit-transition: all 0.3s 1s ease-out;
     transition: all 0.3s 1s ease-out;
+}
+
+
+
+@media(min-width:1800px){
+    #about{
+        margin-top: 20%;
+    }
+}
+@media(min-width:1500px) and (max-width:1800px){
+    #about{
+        margin-top: 15%;
+    }
+
+}
+
+@media(min-width:1400px) and (max-width:1500px){
+    #about{
+        margin-top: 10%;
+    }
+}
+
+@media(min-width:1300px) and (max-width:1400px){
+    #about{
+        margin-top: 8%;
+    }
+}
+
+@media(min-width:1200px) and (max-width:1300px){
+    #about{
+        margin-top: 6%;
+    }
+}
+
+section{
+    margin-bottom: 60px !important;
+}
+#intro{
+    margin-bottom: 100px !important;                                        
+    min-height: 540px;
+    max-height: 1000px;
+}
+section{
+    display: block;
 }
