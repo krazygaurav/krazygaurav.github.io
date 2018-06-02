@@ -147,7 +147,7 @@ $(function(){
 
 /* Main.js */
 document.addEventListener("DOMContentLoaded", function () {
-    new SweetScroll({});
+    // new SweetScroll({});
     particlesJS("particles-js", {
         particles: {
             number: {
@@ -281,10 +281,16 @@ function manageProjects(hide, doHide){
 }
 $(document).ready(function () {
     $('body').toggleClass('loaded');
-    document.addEventListener('DOMContentLoaded', () => {
-        const scroller = new SweetScroll({});
-    }, false);
-    new WOW().init();
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     const scroller = new SweetScroll({});
+    // }, false);
+    // new WOW().init();
+    $(".down").click(function(){
+        $('html, body').stop().animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 1000);
+        return false;
+    });
     manageProjects("NA", "hideall");
     manageProjects("ax", "show");
 });
@@ -308,5 +314,13 @@ $(document).ready(function () {
     });
     $("#all").on("click", function(){
         manageProjects("NA", "showall");
+    });
+
+
+    $(".smooth-scroll").click(function(){
+        $('html, body').stop().animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 1000);
+        return false;
     });
 });

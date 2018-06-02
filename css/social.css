@@ -106,8 +106,8 @@
 }
 
 .social-media-wrap .social-media .social-media-lnk:nth-child(3) {
-    top: 90px;
-    right: 15px;
+    top: 49px;
+    right: 22px;
     width: 80px;
     height: 80px;
     font-size: 38px;
@@ -115,10 +115,18 @@
 }
 
 .social-media-wrap .social-media .social-media-lnk:nth-child(4) {
-    right: -30px;
-    bottom: 230px;
+    right: -42px;
+    bottom: 261px;
     width: 75px;
     height: 75px;
+    font-size: 36px;
+    line-height: 60px;
+}
+.social-media-wrap .social-media .social-media-lnk:nth-child(5) {
+    right: -11px;
+    bottom: 116px;
+    width: 56px;
+    height: 56px;
     font-size: 36px;
     line-height: 60px;
 }
@@ -604,11 +612,10 @@
 }
 
 .social-media-wrap .coffee {
-    bottom: 0;
+    bottom: 10px;
     width: 55px;
-    right: 100px;
     height: 60px;
-    right: 230px;
+    right: 274px;
     -webkit-perspective: 200px;
     perspective: 200px;
     position: absolute;
@@ -627,8 +634,8 @@
 
 .social-media-wrap .coffee .cup:before {
     top: -3px;
-    left: 50%;
-    width: 45px;
+    left: 49%;
+    width: 39px;
     height: 15px;
     border: 3px solid;
     background: inherit;
@@ -638,8 +645,8 @@
 
 .social-media-wrap .coffee .cup:after {
     top: -10px;
-    left: 50%;
-    width: 38px;
+    left: 39%;
+    width: 39px;
     height: 10px;
     border: 3px solid;
     background: inherit;
