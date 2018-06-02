@@ -262,7 +262,7 @@ span.btn-text-b2 {
     margin-bottom: 35px;
 }
 
-//CSS for Loader
+/*CSS for Loader*/
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -395,23 +395,26 @@ span.btn-text-b2 {
     transition: all 0.3s 1s ease-out;
 }
 
-
-
+/*Intro CSS*/
 @media(min-width:1800px){
-    #about{
-        margin-top: 20%;
-    }
-}
-@media(min-width:1500px) and (max-width:1800px){
     #about{
         margin-top: 15%;
     }
-
+}
+@media(min-width:1500px) and (max-width:1600px){
+    #about{
+        margin-top: 8%;
+    }
+}
+@media(min-width:1600px) and (max-width:1800px){
+    #about{
+        margin-top: 8%;
+    }
 }
 
 @media(min-width:1400px) and (max-width:1500px){
     #about{
-        margin-top: 10%;
+        margin-top: 8%;
     }
 }
 

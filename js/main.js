@@ -287,7 +287,6 @@ $(document).ready(function () {
     new WOW().init();
     manageProjects("NA", "hideall");
     manageProjects("ax", "show");
-    $("#loader-wrapper").html("");
 });
 
 $(document).ready(function () {
